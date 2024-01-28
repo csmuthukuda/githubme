@@ -1,7 +1,10 @@
+@file:Suppress("UnstableApiUsage")
+
 plugins {
     id("githubme.android.application")
     id("githubme.android.application.compose")
     id("githubme.android.hilt")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -31,6 +34,8 @@ android {
 
 dependencies {
     implementation(project(":feature:login"))
+    implementation(project(":feature:users"))
+    implementation(project(":feature:profile"))
     implementation(project(":core:common"))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
@@ -38,7 +43,6 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.lifecycle.runtimeCompose)
-    implementation(libs.androidx.compose.runtime.tracing)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.material3.windowSizeClass)

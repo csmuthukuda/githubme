@@ -2,14 +2,16 @@
 plugins {
     id("githubme.android.feature")
     id("githubme.android.library.compose")
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.csmprojects.feature.login"
+    namespace = "com.csmprojects.feature.githubme.login"
 }
 
 dependencies {
-
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation(project(":core:common"))
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.foundation.layout)
