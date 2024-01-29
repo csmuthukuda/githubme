@@ -20,6 +20,6 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp.logging)
 
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
-    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation(libs.play.services.auth)
+    implementation(libs.firebase.auth)
 }

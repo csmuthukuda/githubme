@@ -31,13 +31,4 @@ dependencies {
     testImplementation(libs.hilt.android.testing)
     testImplementation(libs.junit4)
     testImplementation(libs.kotlinx.coroutines.test)
-
-    androidTestImplementation(libs.androidx.test.core)
-    androidTestImplementation(libs.androidx.test.ext)
-    androidTestImplementation(libs.androidx.test.espresso.core)
-    androidTestImplementation(libs.androidx.test.rules)
-    androidTestImplementation(libs.androidx.test.runner)
-    androidTestImplementation(libs.hilt.android.testing)
-    androidTestImplementation(libs.junit4)
-    androidTestImplementation(libs.kotlinx.coroutines.test)
 }

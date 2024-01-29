@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -70,9 +72,16 @@ internal fun LoginRoute(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Image(
+                modifier = modifier
+                    .padding(5.dp)
+                    .width(300.dp)
+                    .height(300.dp),
+                painter = painterResource(id = R.drawable.github_icon),
+                contentDescription = null
+            )
             Button(modifier = modifier
-                .width(250.dp)
-                .height(100.dp)
+                .width(200.dp)
                 .padding(5.dp),
                 onClick = {
                     coroutineScope.launch {

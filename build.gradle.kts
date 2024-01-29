@@ -7,7 +7,7 @@ buildscript {
 
     }
     dependencies {
-        classpath("com.google.gms:google-services:4.4.0")
+        classpath(libs.google.services)
     }
 }
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed

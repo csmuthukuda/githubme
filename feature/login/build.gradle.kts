@@ -10,8 +10,6 @@ android {
 }
 
 dependencies {
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
-    implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation(project(":core:common"))
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.foundation.layout)
@@ -21,9 +19,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.ui.util)
 
-    implementation(libs.retrofit.core)
-    implementation(libs.retrofit.kotlin.serialization)
-    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.play.services.auth)
+    implementation(libs.firebase.auth)
 
     testImplementation(libs.androidx.test.core)
     testImplementation(libs.androidx.test.espresso.core)
@@ -32,13 +29,4 @@ dependencies {
     testImplementation(libs.hilt.android.testing)
     testImplementation(libs.junit4)
     testImplementation(libs.kotlinx.coroutines.test)
-
-    androidTestImplementation(libs.androidx.test.core)
-    androidTestImplementation(libs.androidx.test.ext)
-    androidTestImplementation(libs.androidx.test.espresso.core)
-    androidTestImplementation(libs.androidx.test.rules)
-    androidTestImplementation(libs.androidx.test.runner)
-    androidTestImplementation(libs.hilt.android.testing)
-    androidTestImplementation(libs.junit4)
-    androidTestImplementation(libs.kotlinx.coroutines.test)
 }

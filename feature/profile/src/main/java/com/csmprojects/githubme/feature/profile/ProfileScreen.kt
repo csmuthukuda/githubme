@@ -133,29 +133,33 @@ private fun ProfileBody(
         modifier = modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.Top,
+        verticalArrangement = Arrangement.SpaceEvenly,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AsyncImage(
-            modifier = modifier
+            modifier = Modifier
                 .width(300.dp)
-                .padding(5.dp)
+                .padding(horizontal = 5.dp, vertical = 10.dp)
                 .clip(CircleShape),
             contentScale = ContentScale.Crop,
             model = data.avatarUrl,
             contentDescription = null,
         )
         if (!data.name.isNullOrBlank()) {
-            Row {
+            Row(
+                Modifier
+                    .padding(horizontal = 5.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
                 Icon(
-                    modifier = modifier
-                        .padding(5.dp)
-                        .align(Alignment.CenterVertically),
+                    modifier = Modifier
+                        .padding(5.dp),
                     imageVector = Icons.Filled.Badge,
                     contentDescription = null
                 )
                 Text(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp),
                     text = data.name ?: "",
                     style = MaterialTheme.typography.titleLarge
@@ -164,16 +168,21 @@ private fun ProfileBody(
 
         }
         if (!data.location.isNullOrBlank()) {
-            Row {
+            Row(
+                Modifier
+                    .padding(horizontal = 5.dp, vertical = 20.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
                 Icon(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp)
                         .align(Alignment.CenterVertically),
                     imageVector = Icons.Filled.LocationOn,
                     contentDescription = null
                 )
                 Text(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp),
                     text = data.location ?: "",
                     style = MaterialTheme.typography.titleMedium
@@ -182,16 +191,21 @@ private fun ProfileBody(
 
         }
         if (!data.twitterUsername.isNullOrBlank()) {
-            Row {
+            Row(
+                Modifier
+                    .padding(horizontal = 5.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
                 Icon(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp)
                         .align(Alignment.CenterVertically),
                     imageVector = Icons.Filled.AlternateEmail,
                     contentDescription = null
                 )
                 Text(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp),
                     text = "@${data.twitterUsername}" ?: "",
                     style = MaterialTheme.typography.titleMedium
@@ -199,16 +213,21 @@ private fun ProfileBody(
             }
         }
         if (!data.blog.isNullOrBlank()) {
-            Row {
+            Row(
+                Modifier
+                    .padding(horizontal = 5.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
                 Icon(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp)
                         .align(Alignment.CenterVertically),
                     imageVector = Icons.Filled.RssFeed,
                     contentDescription = null
                 )
                 Text(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp),
                     text = data.blog ?: "",
                     style = MaterialTheme.typography.titleMedium
@@ -217,16 +236,21 @@ private fun ProfileBody(
         }
 
         if (!data.company.isNullOrBlank()) {
-            Row {
+            Row(
+                Modifier
+                    .padding(horizontal = 5.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
                 Icon(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp)
                         .align(Alignment.CenterVertically),
                     imageVector = Icons.Filled.Work,
                     contentDescription = null
                 )
                 Text(
-                    modifier = modifier
+                    modifier = Modifier
                         .padding(5.dp),
                     text = data.company ?: "",
                     style = MaterialTheme.typography.titleMedium,

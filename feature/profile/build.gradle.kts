@@ -20,10 +20,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.util)
     implementation(libs.coil.kt.compose)
 
-    implementation(libs.retrofit.core)
-    implementation(libs.retrofit.kotlin.serialization)
-    implementation(libs.kotlinx.serialization.json)
-
     testImplementation(libs.androidx.test.core)
     testImplementation(libs.androidx.test.espresso.core)
     testImplementation(libs.androidx.test.rules)
@@ -32,12 +28,4 @@ dependencies {
     testImplementation(libs.junit4)
     testImplementation(libs.kotlinx.coroutines.test)
 
-    androidTestImplementation(libs.androidx.test.core)
-    androidTestImplementation(libs.androidx.test.ext)
-    androidTestImplementation(libs.androidx.test.espresso.core)
-    androidTestImplementation(libs.androidx.test.rules)
-    androidTestImplementation(libs.androidx.test.runner)
-    androidTestImplementation(libs.hilt.android.testing)
-    androidTestImplementation(libs.junit4)
-    androidTestImplementation(libs.kotlinx.coroutines.test)
 }
