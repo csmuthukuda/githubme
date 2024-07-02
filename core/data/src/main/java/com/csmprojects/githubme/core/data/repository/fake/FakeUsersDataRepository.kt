@@ -6,10 +6,10 @@ import com.csmprojects.githubme.core.data.repository.UsersDataRepository
 class FakeUsersDataRepository : UsersDataRepository {
     private var setListEmpty = false
     override suspend fun getUsersData(): List<UsersDataModel> {
-        if (setListEmpty) {
-            return emptyList()
+        return if (setListEmpty) {
+            emptyList()
         } else {
-            return listOf(getTestData())
+            listOf(getTestData())
         }
 
     }
